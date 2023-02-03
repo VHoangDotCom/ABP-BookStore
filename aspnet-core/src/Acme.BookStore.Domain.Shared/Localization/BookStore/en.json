@@ -5,19 +5,23 @@
     "Welcome": "Welcome",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     "Menu:BookStore": "Book Store",
-    "Menu:Books": "Books",
+
     "Actions": "Actions",
     "Close": "Close",
     "Delete": "Delete",
     "Edit": "Edit",
+    "AreYouSure": "Are you sure?",
+    "AreYouSureToDelete": "Are you sure you want to delete this item?",
+
+    //Books
+    "Menu:Books": "Books",
     "PublishDate": "Publish date",
     "NewBook": "New book",
     "Name": "Name",
     "Type": "Type",
     "Price": "Price",
     "CreationTime": "Creation time",
-    "AreYouSure": "Are you sure?",
-    "AreYouSureToDelete": "Are you sure you want to delete this item?",
+
     "Enum:BookType.0": "Undefined",
     "Enum:BookType.1": "Adventure",
     "Enum:BookType.2": "Biography",
@@ -34,18 +38,47 @@
     "Permission:Books.Edit": "Editing the books",
     "Permission:Books.Delete": "Deleting the books",
 
-    "BookStore:00001": "There is already an author with the same name: {name}",
+
+    //Authors
+    "Menu:Authors": "Authors",
+    "Authors": "Authors",
+    "AuthorDeletionConfirmationMessage": "Are you sure to delete the author '{0}'?",
+    "BirthDate": "Birth date",
+    "NewAuthor": "New author",
 
     "Permission:Authors": "Author Management",
     "Permission:Authors.Create": "Creating new authors",
     "Permission:Authors.Edit": "Editing the authors",
     "Permission:Authors.Delete": "Deleting the authors",
 
-    "Menu:Authors": "Authors",
-    "Authors": "Authors",
-    "AuthorDeletionConfirmationMessage": "Are you sure to delete the author '{0}'?",
-    "BirthDate": "Birth date",
-    "NewAuthor": "New author"
+    "BookStore:00001": "There is already an author with the same name: {name}",
+
+    //Orders
+    "Menu:Orders": "Orders",
+    "Orders": "Orders",
+    "OrderDeletionConfirmationMessage": "Are you sure to delete the order '{0}'?",
+    "SKU": "SKU",
+    "FullName": "Full Name",
+    "PhoneNumber": "Phone Number",
+    "Email": "Email",
+    "Address": "Address",
+    "TotalCheckOut": "Total Check out",
+    "NewOrder": "New order",
+
+    "Enum:OrderStatus.0": "PENDING",
+    "Enum:OrderStatus.1": "AVAILABLE",
+    "Enum:OrderStatus.2": "PROCESSING",
+    "Enum:OrderStatus.3": "COMPLETED",
+    "Enum:OrderStatus.4": "CANCELED",
+    "Enum:OrderStatus.5": "REFUND",
+    "Enum:OrderStatus.6": "COMPLAINT",
+
+    "Permission:Orders": "Order Management",
+    "Permission:Orders.Create": "Creating new orders",
+    "Permission:Orders.Edit": "Editing the orders",
+    "Permission:Orders.Delete": "Deleting the orders",
+
+    "BookStore:00002": "There is already an order with the same SKU: {sku}"
 
   }
 }

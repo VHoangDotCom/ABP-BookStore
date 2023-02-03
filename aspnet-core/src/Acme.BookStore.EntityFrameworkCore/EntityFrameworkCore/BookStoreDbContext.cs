@@ -1,5 +1,6 @@
 ﻿using Acme.BookStore.Authors;
 using Acme.BookStore.Books;
+using Acme.BookStore.Orders;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -56,6 +57,7 @@ public class BookStoreDbContext :
     #endregion
     public DbSet<Book> Books { get; set; }
     public DbSet<Author> Authors { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
 
     public BookStoreDbContext(DbContextOptions<BookStoreDbContext> options)
@@ -102,6 +104,21 @@ public class BookStoreDbContext :
                 .HasMaxLength(AuthorConsts.MaxNameLength);
 
             b.HasIndex(x => x.Name);
+        });
+
+
+        builder.Entity<Order>(b =>
+        {
+            b.ToTable(BookStoreConsts.DbTablePrefix + "Orders", BookStoreConsts.DbSchema);
+            b.ConfigureByConvention();
+
+            b.Property(x => x.FullName)
+                .IsRequired()
+                .HasMaxLength(AuthorConsts.MaxNameLength);
+            b.Property(x => x.Email)
+                .IsRequired();
+
+            b.HasIndex(x => x.FullName);
         });
 
     }
