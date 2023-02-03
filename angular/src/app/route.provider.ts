@@ -35,7 +35,14 @@ function configureRoutes(routes: RoutesService) {
         parentName: '::Menu:BookStore',
         layout: eLayoutType.application,
         requiredPolicy: 'BookStore.Authors',
-      }
+      },
+      {
+        path: '/orders',
+        name: '::Menu:Orders',
+        parentName: '::Menu:BookStore',
+        layout: eLayoutType.application,
+        requiredPolicy: 'BookStore.Orders',
+      },
 
     ]);
   };
